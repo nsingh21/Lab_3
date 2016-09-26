@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1></h1>
+<p class="p1" id="p1">
+Mohandas Karamchand Gandhi 2 October 1869 – 30 January 1948) was the preeminent leader of the Indian independence movement in British-ruled India. Employing nonviolent civil disobedience, Gandhi led India to independence and inspired movements for civil rights and freedom across the world. The honorific Mahatma (Sanskrit: "high-souled", "venerable")[3]—applied to him first in 1914 in South Africa,[4]—is now used worldwide. He is also called Bapu (Gujarati: endearment for "father",[5] "papa"[5][6]) in India. In common parlance in India he is often called Gandhiji. He is unofficially called the Father of the Nation.[7][8]
+<br>
+Born and raised in a Hindu merchant caste family in coastal Gujarat, western India, and trained in law at the Inner Temple, London, Gandhi first employed nonviolent civil disobedience as an expatriate lawyer in South Africa, in the resident Indian community's struggle for civil rights. After his return to India in 1915, he set about organising peasants, farmers, and urban labourers to protest against excessive land-tax and discrimination. Assuming leadership of the Indian National Congress in 1921, Gandhi led nationwide campaigns for easing poverty, expanding women's rights, building religious and ethnic amity, ending untouchability, but above all for achieving Swaraj or self-rule.
+<br>
+</p>
+<form>
+Change Border color by cliking button: <br>
+<br>
+</br>
+
+<button type = "button" id="bord" onclick = myFunc(this.id) >Color</button>
+
+<br>
+<br><br>Change Text color by cliking button:<br><br>
+<br>
+<button id="text" type = "button" onclick = myFunc(this.id) >Color</button>
+<br>
+<br>
+Change Width of border: <input type="text" id="width1">
+</body>
+</html>
+
+<style>
+p.p1
+{
+background-color: rgb(25,152,221);
+color: white;
+font-family: times;
+font-size: 14pt;
+border-style: solid;
+border-width: 12px;
+border-color:rgb(118,220,211);
+}
+p.p2
+{
+font-weight: bold;
+}
+body
+{
+background-color: rgb(150,450,238);
+}
+</style>
+<script>
+
+code=1;
+bord=1;
+function myFunc(id)
+{
+   if(id=="text"){
+if(code==1){
+document.getElementById("p1").style.color = 'red';
+  
+document.getElementById("text").style.color = 'red';
+   code=2;
+}
+else if(code==2){
+document.getElementById("p1").style.color='green';
+  
+document.getElementById("text").style.color='green';
+   code=3;
+}
+else if(code==3){
+document.getElementById("p1").style.color = 'blue';
+   document.getElementById("text").style.color = 'blue';
+   code=1;
+}}
+   else if(id=="bord"){
+       if(bord==1){
+document.getElementById("p1").style.borderColor = 'red';
+
+document.getElementById("bord").style.color = 'red';
+   bord=2;
+}
+else if(bord==2){
+document.getElementById("p1").style.borderColor='green';
+
+document.getElementById("bord").style.color='green';
+   bord=3;
+}
+else if(bord==3){
+document.getElementById("p1").style.borderColor = 'blue';
+
+document.getElementById("bord").style.color = 'blue';
+   bord=1;
+}
+   }
+}
+</script>

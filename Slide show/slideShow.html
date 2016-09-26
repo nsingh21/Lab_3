@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title> My Slide-Show </title>
+	</head>
+    
+	<body>	
+		
+		<img src="one.jpg" name="oneId" height="500" width="500">
+		<button onclick="prev()">Previous</button>
+		<button onclick="next()">Next</button>
+		</body>
+</html>
+
+<script>
+var photos= Array(4);
+photos[0]="one.jpg";
+photos[1]="two.jpg";
+photos[2]="three.jpg";
+photos[3]="four.jpg";
+photos[4]="five.jpg";
+
+
+var a=0;
+function next()
+{
+  	if(a==4)
+	{
+		a=0;
+	}
+	else
+	{
+		a=a+1;
+	}
+  document.oneId.src=photos[a];
+}
+
+function prev()
+{
+	if(a==0)
+	{
+		a=4;
+	}
+	else
+	{
+		a=a-1;
+	}
+	document.oneId.src=photos[a];
+}
+</script>
